@@ -1,0 +1,27 @@
+include excerpt.jade
+
+.p-y-lg
+
+	.p-b-lg-1.text-center(data-aos="fade-up")
+		.display-4.fw-400.inline-block.text-primary BRAVABLOG
+			hr.separator.separator-sm.separator-primary.weight-1
+
+		.lead.p-b-md RUTES, ESPACADES, INFO VIATGE ...
+
+
+	.row
+		.col-sm-4.col-ms-6
+			+excerpt('blog1.jpg', '', 'fade-up')
+
+			.p-b-lg.visible-xs
+
+		.col-sm-4.col-ms-6
+			+excerpt('blog1.jpg', '', 'fade-up', '200')
+
+		.col-sm-4.hidden-xs
+			+excerpt('blog1.jpg', '', 'fade-up', '400')
+
+
+
+
+

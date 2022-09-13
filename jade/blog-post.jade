@@ -1,0 +1,109 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos']
+	- var fonticons = ['fontawesome']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'post'
+
+
+	- var pageName = 'Blog'
+	- var pageDescription = 'Rutes, espacades, info viatge...models'
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = '' // mountain / XL / wave
+
+
+include snippets/social-link-icon.jade
+include snippets/excerpt.jade
+
+
+block content
+	include partials/_navbar.jade
+
+	
+
+	.post
+		.container.p-t-lg-1
+			.row.p-b-lg-2
+
+
+				.col-md-6
+					.card-img.m-b(data-aos="fade-right")
+						img.img-responsive(src="#{imgPath}post.png")
+						span.date 12.09.06
+
+
+					.social.text-right(data-aos="fade-up")
+						+socialLink('facebook')
+						+socialLink('twitter')
+						+socialLink('instagram')
+
+
+
+				.col-md-6
+					.h2.text-primary.fw-500.m-b(data-aos="fade").
+						Lorem ipsum dolor sit amet consectetur adipiscing elit
+
+
+
+					.categories.m-b(data-aos="fade")
+						a(href="javascript:;") NOM CATEGORIA
+						span /
+						a(href="javascript:;") CATEGORIA
+					
+
+
+					div(data-aos="fade")
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Pellentesque venenatis, purus justo condimentum ipsum, 
+							et pretium justo ante in dui. Nullam ac risus in ex mattis 
+							pellentesque tortor. Nam id nisi vitae quam vulputate 
+							sagittis eu ac mi. Donec molestie id eros ac finibus. Lorem 
+							ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
+							venenatis, purus justo condimentum ipsum, et pretium justo ante 
+							in dui. Nullam ac risus in ex mattis pellentesque tortor. Nam 
+							id nisi vitae quam vulputate sagittis eu ac mi. Donec molestie 
+							id eros ac finibus.
+
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Pellentesque venenatis, purus justo condimentum ipsum, et 
+							pretium justo ante in dui. Nullam ac risus in ex mattis 
+							pellentesque tortor. Nam id nisi vitae quam vulputate 
+							sagittis eu ac mi. Donec molestie id eros ac finibus.
+
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Pellentesque venenatis, purus justo condimentum ipsum, 
+							et pretium justo ante in dui. Nullam ac risus in ex mattis 
+							pellentesque tortor. Nam id nisi vitae quam vulputate sagittis 
+							eu ac mi. Donec molestie id eros ac finibus. Lorem ipsum dolor 
+							sit amet, consectetur adipiscing elit. Pellentesque venenatis, 
+							purus justo condimentum ipsum, et pretium justo ante in dui. 
+							Nullam ac risus in ex mattis pellentesque tortor. Nam id nisi 
+							vitae quam vulputate sagittis eu ac mi. Donec molestie id eros 
+							ac finibus.
+
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+							Pellentesque venenatis, purus justo condimentum ipsum, et 
+							pretium justo ante in dui. Nullam ac risus in ex mattis 
+							pellentesque tortor. Nam id nisi vitae quam vulputate sagittis 
+							eu ac mi. Donec molestie id eros ac finibus.
+
+
+
+	.container
+		.row
+			.col-sm-4.col-ms-6
+				+excerpt('blog1.jpg', '', 'fade-up')
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog1.jpg', '', 'fade-up', '200')
+
+			.col-sm-4.hidden-xs
+				+excerpt('blog1.jpg', '', 'fade-up', '400')
+
+
+

@@ -1,0 +1,62 @@
+/*-----------------------------------------------------*/
+/*	MODELS NAV
+/*-----------------------------------------------------*/
+.modelsnav{
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	position: absolute;
+	pointer-events: none;
+
+	.btn{
+		font-size: 1.9rem;
+		width: 50px;
+		height: 50px;
+		max-width: 100px;
+		max-height: 100px;
+		letter-spacing: 3px;
+		top: 50%;
+		position: relative;
+		pointer-events: initial;
+		border-radius: 100px;
+
+		&:hover{
+			background-color: #fff !important;
+		}
+
+		&:hover span{
+			color: $brand-1;
+		}
+
+		& + .btn{
+			letter-spacing: -3px;
+		}
+
+	}//btn
+}//modelsnav
+
+
+
+
+.product-features{
+
+
+	.feature-icon{
+		width: 120px;
+		margin-top: -60px;
+	}
+
+	.card{
+		height: calc(100% - 70px);
+	}//card
+
+}//product-features
+
+
+
+
+
+
+
+

@@ -1,0 +1,306 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos']
+	- var fonticons = ['fontawesome']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'inici'
+
+
+	- var pageName = ''
+	- var pageDescription = ''
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = 'wave' // mountain / XL / wave
+
+
+
+mixin block-features()
+	.block-features
+		.block(data-aos="fade-right" data-aos-delay="240")
+			img.svg(src="#{svgPath}ico-square-user.svg")
+			.counter 5
+		.block(data-aos="fade-right" data-aos-delay="160")
+			img.svg(src="#{svgPath}ico-square-bed.svg")
+			.counter 4
+		.block(data-aos="fade-right" data-aos-delay="80")
+			img.svg(src="#{svgPath}ico-square-freezer.svg")
+		.block(data-aos="zoom-out" data-aos-delay="100")
+			img.svg(src="#{svgPath}ico-square-kitchen.svg")
+		.block(data-aos="fade-left" data-aos-delay="80")
+			img.svg(src="#{svgPath}ico-square-heating.svg")
+		.block(data-aos="fade-left" data-aos-delay="160")
+			img.svg(src="#{svgPath}ico-square-shower.svg")
+		.block(data-aos="fade-left" data-aos-delay="240")
+			img.svg(src="#{svgPath}ico-square-toilet.svg")
+
+
+
+include snippets/social-link-icon.jade
+include snippets/excerpt.jade
+
+
+
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container.p-t-lg-1
+
+		.text-center.position-relative.m-b-lg
+			.display-4.fw-400.text-primary.m-b-md.inline-block(data-aos="zoom-out") LLOGUER DE FURGONETES CAMPER 
+				hr.separator.separator-xs.separator-primary.weight-1
+
+			.lead.p-b-md(data-aos="fade-up") TOTALMENT EQUIPADES I A PUNT PER GAUDIR
+
+
+
+
+		.row.p-b-md
+			.col-md-6
+				.card.m-b-md.img-overlay(data-aos="fade-up")
+					.card.card-thumbnail.bg-primary
+						img.card-img(src="#{imgPath}van-01.jpg")
+						.card-thumbnail-svg
+							img.svg(src="#{svgPath}l.svg")
+
+					.card-badge(data-aos="zoom-in" data-aos-delay="50")
+						.content
+							span 90
+							small €/dia
+						span.label A PARTIR DE
+
+				.p-b-lg-1.visible-xs
+
+
+				.h2.fw-500.text-primary(data-aos="fade")
+					span VOLKWAGEN
+					small.fz-80.p-l T5 PRO
+
+				+block-features
+
+				.m-b-md
+					p(data-aos="fade-up").
+						#[strong.text-primary Busques polivalència?] Les nostres volkswagen estil 
+						california són el màxim confort en el mínim espai. Amb elles podràs 
+						serpentejar per qualsevol port de muntanya, perdre’t pel centre de qualsevol 
+						capital europea i accedir o aparcar a qualsevol lloc. Els seus 2 metres d’alçada 
+						et permeten l’accés a quasi tots els aparcaments, i tot sense renunciar 
+						a les màximes prestacions interiors!
+
+				.clearfix(data-aos="fade")
+					.pull-left
+						a.btn.btn-primary.p-x-md(href="javascript") LLOGA UNA BRAVAVANS L
+
+					.pull-left
+						span.m-l
+							+socialLink('facebook')
+						span.m-l-sm
+							+socialLink('twitter')
+						span.m-l-sm
+							+socialLink('instagram')
+
+
+				.p-b-lg-2.visible-sm.visible-xs
+
+
+
+
+
+			.col-md-6
+				.card.m-b-md.img-overlay(data-aos="fade-up")
+					.card.card-thumbnail.bg-primary
+						img.card-img(src="#{imgPath}van-01.jpg")
+						.card-thumbnail-svg
+							img.svg(src="#{svgPath}xl.svg")
+
+					.card-badge(data-aos="zoom-in" data-aos-delay="50")
+						.content
+							span 100
+							small €/dia
+						span.label A PARTIR DE
+
+				.p-b-lg-1.visible-xs
+
+
+				.h2.fw-500.text-primary(data-aos="fade")
+					span FIAT
+					small.fz-80.p-l DUCATO VAN3 MAXI
+
+				+block-features
+
+				.m-b-md
+					p(data-aos="fade-up").
+						#[strong.text-primary Les Camper més familiars!] Campers de 4 places on 
+						torbaràs la combinació perfecta. Totes les prestacions de conducció d’un 
+						turisme amb el confort d’una autocaravana. Els dos llits de matrimoni en 
+						disposició de llitera permeten viatjar i dormir 4 persones còmodament. No 
+						deixis perdre l’oportunitat de gaudir d’aquesta experiència!
+
+				.clearfix(data-aos="fade")
+					.pull-left
+						a.btn.btn-primary.p-x-md(href="javascript") LLOGA UNA BRAVAVANS L
+
+					.pull-left
+						span.m-l
+							+socialLink('facebook')
+						span.m-l-sm
+							+socialLink('twitter')
+						span.m-l-sm
+							+socialLink('instagram')
+
+
+				.p-b-lg-2.visible-sm.visible-xs
+
+
+
+
+		hr.dotted.m-b-lg
+
+
+
+		.p-b-lg-2.visible-sm
+
+		.text-center.position-relative.m-b-lg
+			.display-4.fw-400.text-primary.m-b-md.inline-block(data-aos="zoom-out") ESCAPA DE LA RUTINA
+				hr.separator.separator-xs.separator-primary.weight-1
+
+			.lead.p-b-md(data-aos="fade-up") ON, COM I PERQUÈ BRAVAVANS
+
+
+
+		.flex-grid
+			.row.flex(data-aos="fade")
+
+				.downarr
+
+				.col-sm-6.p-r-0
+					.card.card-full-image(style="background-image:url(#{imgPath}inici_escapa01.jpg)")
+
+
+				.col-sm-6.p-l-0
+					.card.card-primary.text-center.m-0
+						.card-block.p-lg
+							.h4.inline-block FIN A L’INFINIT
+								hr.separator.separator-sm
+							
+							.fz-90
+								p.
+									Vols sentir la natura, fer esport i gaudir de les muntanyes? 
+									esquiar als pirineus o escapar fins als majestuosos paisatges 
+									dels Alps? perdre’t pels poblets de les carreteres del sud de 
+									França? descobrir les capitals europees? resseguir la costa 
+									del mediterrani cala a cala? perseguir les millors onades? 
+									les furgonetes camperitzades de BRAVAVANS s’adapten al teu 
+									viatge i a les teves necessitats, tant si vols llogar una 
+									furgo volkswagen estil California com una Gran Volum estil 
+									autocaravana, no deixis perdre aquesta oportunitat i viu 
+									l’experiència de viatjar amb la màxima sensació de llibertat!
+
+
+
+			.row.flex(data-aos="fade")
+				.col-sm-6.col-sm-push-6.p-l-0
+					.card.card-full-image(style="background-image:url(#{imgPath}inici_escapa02.jpg)")
+
+
+				.col-sm-6.col-sm-pull-6.p-r-0
+					.card.card-primary.text-center.m-0
+						.card-block.p-lg
+							.h4.inline-block AMB TOT EL CONFORT
+								hr.separator.separator-sm
+							
+							.fz-90
+								p.
+									Dins les nostres Camper et trobaràs com a casa i gaudiràs del 
+									viatge amb les màximes comoditats. Tots els nostres vehicles 
+									vivenda disposen de cuina equipada amb tot el necessari, 
+									nevera, menjador amb vaixella i coberteria, llits amb el joc 
+									de llençols complert, calefacció, electricitat i aigua. Només 
+									et caldrà portar la roba que creguis necessària i una bona 
+									càrrega d’esperit explorador. Esteu preparats… doncs a gaudir 
+									de l’aventura!!!
+
+
+
+			.row.flex.m-b-lg(data-aos="fade")
+				.col-sm-6.p-r-0
+					.card.card-full-image(style="background-image:url(#{imgPath}inici_escapa03.jpg)")
+
+
+				.col-sm-6.p-l-0
+					.card.card-primary.text-center.m-0
+						.card-block.p-lg
+							.h4.inline-block EMOCIONAT!
+								hr.separator.separator-sm
+							
+							.fz-90
+								p.
+									Les nostres furgonetes camperitzades són el vehicle amb 
+									el que escapes de la rutina, condueixes per on et porta 
+									la imaginació i dorms allà on els teus somnis es 
+									materialitzen. Viu l’experiència de sentir-te lliure i 
+									gaudeix de les vacances en una de les furgonetes camper 
+									vw de BRAVAVANS!
+
+								p.
+									Dormir sota les estrelles no tornarà a ser una fantasia.
+
+
+
+
+			.row.p-b-lg
+				.col-sm-8
+					.p-b.text-center(data-aos="fade-up")
+						.display-4.fw-400.inline-block.text-primary BRAVABLOG
+							hr.separator.separator-sm.separator-primary.weight-1
+
+						.lead RUTES, ESPACADES, INFO VIATGE ...
+
+					.row
+
+						.col-sm-6.col-ms-6
+							+excerpt('blog1.jpg', '', 'fade-up')
+
+							.p-b-lg.visible-xs
+
+						.col-sm-6.col-ms-6
+							+excerpt('blog1.jpg', '', 'fade-up', '200')
+
+
+					.p-b-lg-2.visible-ms.visible-xs
+
+
+
+				.col-sm-4
+					.p-b.text-center(data-aos="fade-up")
+						.display-4.fw-400.inline-block.text-primary EXPERIÈNCES
+							hr.separator.separator-sm.separator-primary.weight-1
+
+						.lead COMPARTEIX LA TEVA EXPERIÈNCIA AMB UNA BRAVAVANS
+
+					.col-ms-6.col-ms-push-3
+						img(src="#{imgPath}fb.jpg" style="width:100%;")
+
+
+
+	.banner-gironacampers(data-aos="fade")
+		.container
+			.p-b-md
+				img.svg(src="#{svgPath}girona-campers-alt.svg")
+
+			.h2.inline-block DESCOBREIX LES FURGONETES DE GIRONA CAMPERS
+				hr.separator.separator-xs.bg-white.weight-1
+
+			p.m-0 VENTA D'STOCK I SERVEI PERSONALITZAT D'IMPORTACIÓ DE FURGONETES CAMPER
+
+
+
+
+
+
+
+
+
+

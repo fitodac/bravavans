@@ -1,0 +1,162 @@
+/*-----------------------------------------------------*/
+/*	HERO
+/*-----------------------------------------------------*/
+.hero{
+	background: $brand-1;
+	color: #fff;
+	padding: 100px 0 50px;
+	position: relative !important;
+	overflow: hidden;
+
+
+
+	.navbar{
+		width: 100%;
+		padding-top: 10px;
+		margin: 0;
+		top: 0;
+		position: fixed;
+		transition: .4s;
+		z-index: 50;
+
+
+
+
+		.bootstrap-select{
+			width: 100% !important;
+			padding-top: 5px;
+
+			.btn-default{
+				background-color: transparent;
+				border-color: rgba(#fff, .6);
+				border-width: 1px;
+				width: auto;
+				height: 34px;
+				float: right;
+				border-radius: 4px;
+			}//btn-default
+
+			&.btn-group .dropdown-toggle{
+				
+				&::after{
+					border-top-color: #fff;
+					top: calc(50% - 3px);
+					position: absolute;
+				}//caret
+
+				.filter-option{
+					color: #fff;
+					font-size: .9rem;
+					line-height: 1.2;
+				}//filter-option
+
+			}//dropdown-toggle
+
+		}//bootstrap-select
+
+
+
+	}//navbar
+
+
+
+	.navbar.alt-nav{
+		background: #fff;
+		border-bottom: solid 1px #ddd;
+
+		#main-navbar ul.nav .nav-link{ 
+			color: $brand-1; 
+		}//nav-link
+
+		.navbar-brand path{
+			fill: $brand-1 !important;
+		}//navbar-brand
+
+
+		.bootstrap-select{
+
+			.btn-default{
+				border-color: $brand-1;
+			}//btn-default
+
+			&.btn-group .dropdown-toggle{
+				
+				&::after{
+					border-top-color: $brand-1;
+				}//caret
+
+				.filter-option{
+					color: $brand-1;
+				}//filter-option
+
+			}//dropdown-toggle
+
+
+		}//bootstrap-select
+
+	}//alt-nav
+
+
+
+	#main-navbar{
+		text-align: center;
+
+		ul.nav{
+			display: inline-block;
+			float: none;
+
+			.nav-item{
+				font-family: $oswald;
+				font-size: 1.1rem;
+				text-transform: uppercase;
+				font-weight: 300;
+				letter-spacing: .5px;
+			}//nav-item
+
+			.nav-link{
+				color: #fff;
+			}//nav-link
+
+			.nav-item.active .nav-link,
+			.nav-link:hover,
+			.nav-link:active,
+			.nav-link:focus{
+				background-color: transparent;
+				opacity: .6;
+			}//hover
+
+		}//ul.nav
+	}//main-navbar
+
+
+	.hero-bg{
+		width: 100%;
+		position: absolute !important;
+		z-index: 1;
+	}//hero-bg
+
+
+	> .container{
+		text-align: center;
+		position: relative;
+		z-index: 30;
+
+
+		h1{
+			font-size: 4rem;
+			font-weight: 400;
+			text-transform: uppercase;
+			display: inline-block;
+		}//h1
+
+
+		.page-description{
+			font-family: $oswald;
+			font-size: 1.3rem;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+		}//page-description
+
+	}//container
+
+}//hero

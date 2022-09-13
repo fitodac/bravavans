@@ -1,0 +1,52 @@
+script(src="#{pluginsPath}modernizr.js")
+script(src="#{pluginsPath}jquery/jquery.2.1.4.min.js")
+script(src="#{pluginsPath}bootstrap/bootstrap.min.js")
+
+if plugins
+	each val in plugins
+		if val == 'aos'
+			script(src="#{pluginsPath}aos/aos.js")
+
+		if val == 'bootstrap-select'
+			script(src="#{pluginsPath}bs-select/js/bootstrap-select.min.js")
+
+		if val == 'bs-datetimepicker'
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js")
+			script(src="#{pluginsPath}bs-datetimepicker/bootstrap-datetimepicker.min.js")
+
+		if val == 'gmap3'
+			script(src="#{pluginsPath}gmap3/gmap3.min.js")
+
+		if val == 'masonry'
+			script(src="#{pluginsPath}masonry/masonry.pkgd.min.js")
+
+		if val == 'owl'
+			script(src="#{pluginsPath}owl/owl.carousel.min.js")
+
+		if val == 'parsley'
+			script(src="#{pluginsPath}parsley/parsley.min.js")
+
+		if val == 'scrollorama'
+			script(src="#{pluginsPath}scrollorama/jquery.scrollorama.js")
+
+		if val == 'lightbox'
+			script(src="#{pluginsPath}simple-lightbox/simple-lightbox.min.js")
+
+		if val == 'touchspin'
+			script(src="#{pluginsPath}touchspin/jquery.bootstrap-touchspin.min.js")
+
+		if val == 'unveil'
+			script(src="#{pluginsPath}unveil/jquery.unveil.js")
+
+
+
+
+script(src="#{jsPath}nitro.min.js")
+
+if projectJS
+	each val in projectJS
+		script(src="#{jsPath}#{val}")
+
+
+
+

@@ -1,0 +1,57 @@
+/*-----------------------------------------------------*/
+/*	SOCIAL
+/*-----------------------------------------------------*/
+.social{
+	text-align: center;
+	padding-bottom: 30px;
+	z-index: 30;
+
+	.btn.btn-primary{
+		background: #fff;
+		margin: 0 5px;
+	}//btn
+
+	i{
+		font-size: 110%;
+		top: -6px;
+	}//fa-envelope
+
+	&.pull-to-top{
+		margin-top: -20px;
+
+		.btn.btn-primary{
+			border-color: #fff;
+		}//btn-primary
+	}//pull-to-top
+
+
+
+
+	&.text-right{
+		text-align: right;
+	}//text-right
+
+
+}//social
+
+
+
+.btn{
+	.fa-facebook{ }
+	.fa-twitter{ top: -3px; }
+	.fa-instagram{ top: -4px; }
+	.fa-youtube-play{ top: -4px; }
+	.fa-whatsapp{ top: -4px; }
+	.fa-envelope{ 
+		font-size: 120%;
+		top: -6px; 
+	}
+}//btn
+
+
+
+
+
+
+
+

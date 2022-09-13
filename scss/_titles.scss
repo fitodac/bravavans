@@ -1,0 +1,33 @@
+/*-----------------------------------------------------*/
+/*	TITLES
+/*-----------------------------------------------------*/
+
+.title-undeline{
+	border-bottom: solid 2px $brand-1;
+	color: $brand-1;
+	font-weight: 500;
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	margin-bottom: 30px;
+	display: block;
+
+
+	> small,
+	> small a{
+		color: #4D4D4D;
+		font-size: 80%;
+		font-weight: 300;
+		line-height: 1.4;
+		text-transform: none;
+		top: 1px;
+		position: relative;
+	}
+
+
+	&::after{
+		content: '';
+		clear: both;
+		display: block;
+	}//after
+
+}//title-undeline

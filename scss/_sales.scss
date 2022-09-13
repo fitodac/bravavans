@@ -1,0 +1,35 @@
+.block-features{
+	margin: 0 -6px 30px;
+
+
+	.block{
+		border: solid 1px #ddd;
+		width: 69px;
+		height: 69px;
+		margin: 0 6px;
+		float: left;
+		position: relative;
+
+		.svg{
+			width: 100%;
+		}//svg
+
+		.counter{
+			text-align: center;
+			font-weight: 400;
+			width: 100%;
+			left: 0;
+			bottom: 3px;
+			position: absolute;
+		}//counter
+
+	}//block
+
+
+	&::after{
+		content: '';
+		clear: both;
+		display: block;
+	}//after
+
+}//block-features

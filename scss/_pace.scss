@@ -1,0 +1,41 @@
+/*-----------------------------------------------------*/
+/*	PACE
+/*-----------------------------------------------------*/
+.pace{
+	background: #fff;
+	width: 100%;
+	height: 100%;
+	transition: .3s;
+	position: fixed;
+	pointer-events: unset;
+	z-index: 9999;
+
+	.pace-progress{
+		background: $brand-1;
+		height: 4px;
+	}//pace-progress
+}//pace
+
+.pace-active{
+	display: block;
+	opacity: 1;
+	visibility: visible;
+}//pace-active
+
+.pace-inactive{
+	display: block;
+	opacity: 0;
+	visibility: hidden;
+}//pace-inactive
+
+.pace-done .pace-inactive{
+	z-index: -1;
+}
+
+
+.pace-running{
+	overflow: hidden;
+}
+
+
+

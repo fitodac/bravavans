@@ -1,0 +1,347 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos', 'masonry']
+	- var fonticons = ['fontawesome', 'simple-line-icons']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'models'
+
+
+	- var pageName = 'Models'
+	- var pageDescription = ''
+	- var heroBG = 'maxresdefault.jpg'
+	- var heroICON = 'XL' // mountain / XL / wave
+
+
+include snippets/social-link-icon.jade
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.social.pull-to-top.position-relative(data-aos="zoom-out")
+		+socialLink('facebook')
+		+socialLink('twitter')
+		+socialLink('instagram')
+
+
+
+
+	.container.p-t-md
+
+		.text-center.position-relative.m-b-lg-2
+			.display-4.fw-400.text-primary.m-b.inline-block(data-aos="zoom-out") VOLKSWAGEN 
+				small.text-gray4.fz-80 T5 PRO
+				hr.separator.separator-xs.separator-primary.weight-1
+
+
+			.lead.p-b-md.m-b-0(data-aos="fade-up").
+				VOLKSWAGEN T5 PRO matriculada a l’abril de 2015#[br]
+				Motor 1.9 TDI de 115cv amb 20.000 km. aprox.
+
+
+			div(data-aos="fade-up")
+				p
+					a.btn.btn-primary.btn-lg.p-x-lg-1(href="javascript:;") RESERVAR
+				a.text-black(href="javascript:;") o contacta amb nosaltres
+
+
+
+			.modelsnav
+				button.btn.btn-default.btn-icon.btn-outline.btn-circle.pull-left(data-aos="fade-right")
+					span.icon-arrow-left
+
+				button.btn.btn-default.btn-icon.btn-outline.btn-circle.pull-right(data-aos="fade-left")
+					span.icon-arrow-right
+
+
+
+
+
+
+		.product-features
+			.row.flex.p-b-md
+
+
+				.col-md-4
+					.card.text-center
+
+						div(data-aos="zoom-out")
+							img.svg.feature-icon(src="#{svgPath}ico-circle-user.svg")
+						
+						.card-block
+							.p-b
+								.h4(data-aos="fade") PLACES
+									hr.separator.separator-xs.separator-primary.weight-1
+
+
+							div(data-aos="fade")
+								strong.text-primary 5 PLACES PER A CIRCULAR
+								ul.list-unstyled.p-b
+									li 3 a la cabina
+									li 2 a l’habitacle
+
+							div(data-aos="fade")
+								strong.text-primary 4 PLACES PER A DORMIR
+								ul.list-unstyled
+									li 1 seient llit de 120x190cm a l’habitacle
+									li 1 llit de 120x190 cm al sostre elevable
+
+					.row(data-aos="fade-up")
+						.col-md-8.col-md-push-2
+							a.btn.btn-primary.btn-block(href="javasctipt:;") DESCARREGAR#[br]PLANELL DE L’INTERIOR
+
+
+
+
+
+				.col-md-4
+					.card.text-center
+					
+						div(data-aos="zoom-out" data-aos-delay="200")
+							img.svg.feature-icon(src="#{svgPath}ico-circle-freezer.svg")
+
+						.card-block
+							.p-b
+								.h4(data-aos="fade") EQUIPAMENT INTERIOR
+									hr.separator.separator-xs.separator-primary.weight-1
+
+
+							div(data-aos="fade")
+								strong.text-primary CUINA DE DOS FOGONS
+								ul.list-unstyled.p-b
+									li Integrada amb bombona de gas butà de 2kg
+
+
+							div(data-aos="fade")
+								strong.text-primary PICA AMB AIXETA I DIPÒSIT D’AIGUA
+								ul.list-unstyled.p-b
+									li De 60l., dutxa exterior, grup de pressió de 7l.
+
+
+							div(data-aos="fade")
+								strong.text-primary NEVERA AMB 49L. DE CAPACITAT
+	
+	
+							div(data-aos="fade")
+								strong.text-primary SEGONA BATERIA, PLACA SOLAR
+								ul.list-unstyled.p-b
+									li.
+										Carregador de bateries, inversor de 350w. endolls a 12v
+										i 220v i presa de corrent exterior 220v., il·luminació led
+
+
+							div(data-aos="fade")
+								strong.text-primary TAULA EXTRAIBLE I SEIENTS GIRATORIS
+	
+	
+							div(data-aos="fade")
+								strong.text-primary CALEFACCIÓ ESTACIONARIA
+								ul.list-unstyled
+									li Funciona amb el vehicle aturat, dorm amb la màxim comoditat
+
+
+					.row(data-aos="fade-up")
+						.col-md-8.col-md-push-2
+							a.btn.btn-primary.btn-block(href="javasctipt:;") DESCARREGAR#[br]EQUIPAMENT COMPLERT
+
+
+
+
+
+
+				.col-md-4
+					.card.text-center
+
+						div(data-aos="zoom-out" data-aos-delay="400")
+							img.svg.feature-icon(src="#{svgPath}ico-circle-tool.svg")
+
+						.card-block
+							.p-b
+								.h4(data-aos="fade") ESPECIFICACIONS TÈCNIQUES
+									hr.separator.separator-xs.separator-primary.weight-1
+
+
+							div(data-aos="fade")
+								strong.text-primary VOLKSWAGEN TRANSPORTER T5
+								ul.list-unstyled.p-b
+									li  Motor 1.9 TDI de 115cv i dipòsit de GASOIL de 80l.
+
+
+							div(data-aos="fade")
+								strong.text-primary RADIO CD MP3
+								ul.list-unstyled.p-b
+									li  presa AUX-IN guantera per a connexió de font d’audio externa
+
+
+							div(data-aos="fade")
+								strong.text-primary BLUETOOTH
+								ul.list-unstyled.p-b
+									li  per al telèfon mobil
+
+
+							div(data-aos="fade")
+								strong.text-primary CONTROL DE VELOCITAT
+								ul.list-unstyled.p-b
+									li  de creuer TEMPOMAT
+
+
+							div(data-aos="fade")
+								strong.text-primary CLIMATITZADOR
+								ul.list-unstyled.p-b
+									li  semiautomàtic a cabina CLIMATIC
+
+
+							div(data-aos="fade")
+								strong.text-primary SISTEMA START-STOP
+								ul.list-unstyled
+									li estalvi consum i més ecològic
+
+
+					.row(data-aos="fade-up")
+						.col-md-8.col-md-push-2
+							a.btn.btn-primary.btn-block(href="javasctipt:;") DESCARREGAR#[br]ESPECIFICACIONS COMPLERTES
+
+
+
+
+
+
+
+		.portfolio-grid
+			img.img-portfolio(src="#{imgPath}portfolio-1.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-2.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-3.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-4.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-5.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-6.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-7.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-8.jpg" data-aos="fade")
+			img.img-portfolio(src="#{imgPath}portfolio-9.jpg" data-aos="fade")
+
+
+
+		//- BANNER
+		.card.m-b-lg(data-aos="fade-up")
+			.card-block.text-center.p-y-md.p-x-lg-2
+				
+				.h2.fw-500.m-b.text-primary ACCESSORIS
+
+				p.
+					Consulta la nostra llista d’accessoris amb tot allò que podem afegir 
+					a la teva reserva per gaudir al màxim de l’experiència
+
+
+				a.btn.btn-primary.btn-lg(href="javascript:;") VISITAR ACCESSORIS BRAVAVANS
+
+
+
+		.p-b-lg-1.visible-xs
+
+
+
+		.text-center.p-b-md(data-aos="fade-up")
+			.display-4.fw-400.inline-block.text-primary TARIFES
+				hr.separator.separator-sm.separator-primary.weight-1
+
+			p.
+				Tots els #[strong ponts i festius] de l'any es comptabilitzen 
+				com a temporada mitja menys #[strong Setmana Santa] que es comptabilitza 
+				com a temporada alta.
+
+
+
+		.row.p-b-md
+
+			.col-md-4
+				.car.card-primary.text-center.m-b
+					.card-block
+						div: strong TEMPORADA BAIXA
+						small 1 octubre al 31 de desembre / 1 gener al 30 de març
+
+				.car.card-default.text-center
+					.card-block
+						div: strong 90,00 €/dia
+						small El període mínim de lloguer serà de 2 dies en temporada baixa
+
+
+
+			.col-md-4
+				.car.card-primary.text-center.m-b
+					.card-block
+						div: strong TEMPORADA MITJA
+						small 1 d’abril al 15 de juny / 18 de setembre al 30 de setembre
+
+				.car.card-default.text-center
+					.card-block
+						div: strong 100,00 €/dia
+						small El període mínim de lloguer serà de 3 dies en temporada mitja
+
+
+
+			.col-md-4
+				.car.card-primary.text-center.m-b
+					.card-block
+						div: strong TEMPORADA ALTA
+						small 1 de Juliol al 17 de setembre / 16 de juny al 17 de setembre
+
+				.car.card-default.text-center
+					.card-block
+						div: strong 120,00 €/dia
+						small El període mínim de lloguer serà de 7 dies en temporada alta
+
+
+
+
+		.text-center.p-b-lg(data-aos="fade-up")
+			p
+				a.btn.btn-primary.btn-lg.p-x-lg-1(href="javascript:;") RESERVAR
+			a.text-black(href="javascript:;") o contacta amb nosaltres
+		
+
+		.p-b-lg-1.visible-xs
+
+
+		.card.card-dotted.m-b-md(data-aos="zoom-out")
+			.card-block.p-md
+				.row
+					.col-md-8.col-sm-6(data-aos="fade-right" data-aos-delay="200")
+						.h4.text-primary CONDICIONS
+
+						ul.list-dot.p-b-md
+							li El períodes mínims de lloguer són els establerts a l’apartat ‘TARIFES’.
+							li Els kilometres addicionals tindran un cost de 0,20 €/km.
+							li En temporada mitja i baixa, apliquem un 5% de descompte en lloguers de més de 7 dies i un 10% en lloguers de més de 14 dies. 
+							li Tots els nostres vehicles disposen d’una assegurança a tot risc inclosa en el preu del lloguer.
+							li Caldrà dipositar una fiança de 700 euros en el moment de recollir el vehicle. 
+							li En temporada baixa i mitja podràs recollir la furgo la tarda anterior per 50€.
+							li Les nostres camper bravavans es poden recollir a Barcelona (aeroport, estació de tren i/o port) amb un sobrecost de 80€. Subjecte a disponibilitat.
+
+						a.btn.btn-primary(href="javascript:;") DESCARREGAR CONDICIONS
+
+						.p-b-lg-1.visible-xs
+
+
+					.col-md-4.col-sm-6(data-aos="fade-left" data-aos-delay="400")
+						.h4.text-primary EL LLOGUER INCLOU
+
+						ul.list-dot.p-b-md
+							li ‘kit de nit’ complert
+							li ‘kit de cuina’ complert
+							li ‘kit de seguretat complert
+							li Assegurança a tot risc (franquícia 700€) i assistència a carretera
+							li Del dia 1 al 7 de lloguer s'inclouen 300km/dia gratuïts
+							li Del dia 8 al 14 de lloguer s’inclouen 400km/dia gratuïts
+							li En el lloguer de 15 dies o més, no hi haurà limitació de kilometratge
+							li Els lliuraments de les bravavans es fan a l’aeroport de Girona i l’estació de l’Ave, renfe i autobusos de Girona sense cap sobrecost 
+
+						a.btn.btn-primary(href="javascript:;") DESCARREGAR CONDICIONS
+
+
+
+
+
+		include snippets/latest-posts.jade
+
+

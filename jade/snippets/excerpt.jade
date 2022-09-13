@@ -1,0 +1,23 @@
+mixin excerpt(img, cardClass, animation, animationDelay)
+	div( class="card card-excerpt #{cardClass}" data-aos="#{animation}" data-aos-delay=(animationDelay != undefined ? animationDelay : 0) )
+		a.card-thumbnail.fx-zoom-in(href="blog-post.html")
+			.card-img
+				img.img-responsive(src="#{imgPath}#{img}")
+				span.date 12.09.06
+
+
+		.card-block
+			a.post-title(href="blog-post.html").
+				Lorem ipsum dolor sit amet consectetur adipiscing elit
+
+			p.
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Pellentesque venenatis, purus justo condimentum ipsum, 
+				et pretium justo ante in dui. Nullam ac risus in ex mattis 
+				pellentesque tortor. Nam id nisi vitae quam vulputate 
+				sagittis eu ac mi. Donec molestie id eros ac finibus...
+
+		.categories
+			a(href="javascript:;") NOM CATEGORIA
+			span /
+			a(href="javascript:;") CATEGORIA

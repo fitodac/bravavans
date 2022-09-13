@@ -1,0 +1,121 @@
+/*-----------------------------------------------------*/
+/*	FORMS
+/*-----------------------------------------------------*/
+form{
+
+	label{
+		font-weight: 300;
+		font-size: .9rem;
+	}//label
+
+
+	.form-control{
+		border: solid 2px $brand-1;
+		font-size: 1rem;
+		line-height: 1.3;
+		padding: 6px 14px;
+	}//form-control
+
+
+
+	// DROPDOWN MENU
+	.bootstrap-select{
+
+		.dropdown-toggle.btn-default,
+		&.btn-group.open .dropdown-toggle.btn-default{
+			background: #fff;
+			border:solid 2px $brand-1;
+			color: $dark;
+			font-weight: 300;
+
+			&:hover,
+			&:active,
+			&:focus{
+				background: #fff;
+				border:solid 2px $brand-1;
+				color: $brand-1;
+			}//hover
+
+		}//dropdown-toggle
+
+
+		.dropdown-menu{
+			border-radius: 0;
+		}
+
+
+	}//bootstrap-select
+
+
+
+
+	.form-group.has-feedback,
+	&.form-horizontal .form-group.has-feedback{
+		margin: 0;
+		
+		.form-control-feedback{
+			// right: 0;
+		}//form-control-feedback
+
+	}//form-group has-feedback
+
+
+}//form
+
+
+
+
+
+// CHECKBOXES
+.form-horizontal .checkbox,
+.form-horizontal .radio,
+.checkbox,
+.radio{
+	padding-top: 0;
+
+	label{
+		font-weight: 300;
+		padding-top: 0;
+	}//label
+
+	span::before,
+	span::after{
+		color: $brand-1 !important;
+	}
+
+}//checkbox
+
+
+
+.checkbox{
+
+	label > input[type="checkbox"] + span::after{
+		// content: "\f371";
+	}
+
+}//checkbox
+
+
+.radio{
+
+	label > input[type="radio"] + span::after{
+		content: "\f400";
+	}
+
+}//checkbox
+
+
+
+
+
+.form-horizontal{
+
+	label{
+		padding-top: 10px;
+	}//label
+
+}//form-horizontal
+
+
+
+

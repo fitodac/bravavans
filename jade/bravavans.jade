@@ -1,0 +1,126 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos']
+	- var fonticons = ['fontawesome']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'bravavans'
+	
+
+	- var pageName = 'Bravavans'
+	- var pageDescription = 'Coneix-nos'
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = '' // mountain / XL / wave
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container.p-t-lg-1
+		.row.p-b-lg-1
+			.col-sm-6.col-ms-10.col-ms-push-1
+				.h2.fw-500.text-primary QUÈ ÉS BRAVAVANS
+
+				.p-y-md
+					img.img-responsive(src="#{imgPath}inici_escapa01.jpg" style="min-width:100%;")
+
+				div(data-aos="fade-right")
+					p.
+						Decidim tirar endavant el projecte amb la intenció de compartir 
+						allò que més ens apassiona, viatjar en camper. Som una parella 
+						jove: la Carla i en Carles; amb dos fills petits l’Oriol i l’Eudald. 
+						Quan ells encara no havien aparegut a les nostres vides ja viatjàvem 
+						arreu en furgo i ara que ells estan amb nosaltres no hem renunciat 
+						a seguir-ho fent, compartim amb ells aquesta meravellosa experiència. 
+						L’Edel, el nostre gos, sempre ens acompanya.
+
+					p.
+						Bravavans és una barreja de sentiments, emocions i vivències, la seva 
+						gestació ve motivada per la necessitat de poder compartir el que més 
+						ens agrada: viatjar, descobrir, reduir, simplificar i improvitzar, 
+						observar, parar, respirar i gaudir de tots aquests  moments amb aquells 
+						a qui més estimem.
+
+					p.
+						Volem arribar a tothom: famílies, amics, esportistes, solitaris, 
+						exploradors, grans i petits. Tots estem replets de somnis i volem 
+						que les nostres furgos t’ajudin a viatjar-hi. Ja sigui perquè et 
+						portin a fer una cursa de muntanya, a passar una bona estona amb els 
+						amics o amb la parella o a gaudir de la serenor de la solitud, a dormir 
+						vora una caleta o a veure una posta de sol davant del mar, però sempre 
+						sense deixar de percebre el moment,...aquest moment en que l’aire fresc 
+						ens eriça la pell, omplim els pulmons i per un instant recordem que, si 
+						volem, som lliures...    
+
+					p.
+						Escull el destí, escull el camí i escull el moment, de la resta ens 
+						n’encarreguem a BRAVAVANS.#[br]
+						Gaudeix de l’experiència!
+
+
+				.visible-xs.p-b-lg-2
+
+
+
+
+			.col-sm-6.col-ms-10.col-ms-push-1
+				.h2.fw-500.text-primary PERQUÉ BRAVAVANS
+
+				.p-y-md
+					img.img-responsive(src="#{imgPath}inici_escapa02.jpg" style="min-width:100%;")
+
+				div(data-aos="fade-left")
+					p.
+						A BRAVAVANS t’oferim l’experiència més complerta! Prepara l’equipatge 
+						i fuig de la rutina perquè els nostres vehicles estan equipats amb tot 
+						el necessari perquè no hagis de pensar en organitzar res.
+
+					p.
+						A les nostres furgonetes hi trobaràs tot el parament necessari per a 
+						cuinar i i fer tots els àpats, tota la roba de llit indispensable per 
+						a dormir plàcidament i totes les comoditats que es poden oferir en una 
+						llar sobre rodes. el kit de cuina i el kit de nit estan inclosos al 
+						preu del lloguer i ofereixen una experiència integral!
+
+					p.
+						Els nostres, són vehicles nous, amb un historial de revisions complert 
+						i amb totes les garanties mecàniques possibles per tal d’oferir una 
+						experiència complerta i tranquil·la. L’assegurança a tot risc i 
+						l’assitència a carretera completen la nostra fórmula. El kit de seguretat 
+						inclòs al preu de lloguer no deixa peu als entrebancs!
+
+					p.
+						No saps com funciona una camper? Cap problema! a la recollida del vehicle 
+						t’oferim una extensa explicació sobre tot el necessari, a més durant el 
+						viatge t’acompanyarà el manual d’ús del vehicle i un telèfon d’atenció 
+						personal (les 24h els 365 dies). A més al nostre blog trobaràs informació 
+						constantment actualitzada sobre llocs on pernoctar, repostar i artícles 
+						amb la descripció de rutes i propostes per tal de gaudir al màxim l’experiència!
+
+
+
+
+		//- BANNER
+		.card.card-default.m-b-lg(data-aos="fade-up")
+			.card-block.text-center.p-y-md.p-x-lg-2
+				
+				.h2.fw-500.m-b.text-primary Necessites quelcom més?
+
+				p.
+					Completa la teva reserva amb els #[a.link(href="javascript:;") nostres kit’s addicionals] 
+					o en el cas que cerquis quelcom especial i no ho trobis, no ho dubtis i contacte’ns 
+					per correu electrònic. 
+
+				a.btn.btn-primary.btn-lg(href="javascript:;") CONTACTAR
+
+
+
+
+		include snippets/latest-posts.jade
+
+
+
+
+
+

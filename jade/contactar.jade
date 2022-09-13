@@ -1,0 +1,93 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos', 'gmap3']
+	- var fonticons = ['fontawesome', 'ionicons']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'contactar'
+
+
+	- var pageName = 'Contactar'
+	- var pageDescription = 'Pregunta’ns qualsevol dubte que tinguis'
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = '' // mountain / XL / wave
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container.p-y-lg-1
+		
+		form.form-horizontal
+
+			.h3.title-undeline Dades personals
+
+
+			.row.p-b-md
+				.col-md-6.form-left
+
+					.form-group
+						label.col-md-6 NOM I COGNOMS
+						.col-md-6
+							input.form-control(type="text" placeholder="Nom i Cognoms")
+
+
+					.form-group
+						label.col-md-6 TELÈFON
+						.col-md-6
+							input.form-control(type="text" placeholder="Telèfon")
+
+
+
+				.col-md-6.form-right
+
+					.form-group
+						label.col-md-6 E-MAIL
+						.col-md-6
+							input.form-control(type="text" placeholder="E-mail")
+
+					.form-group
+						label.col-md-6 REPETIR E-MAIL
+						.col-md-6
+							input.form-control(type="text" placeholder="Repetir e-mail")
+
+
+
+			.p-b-lg-1.visible-xs
+
+
+			.h3.title-undeline Comentaris
+
+			textarea.form-control.m-b-lg(placeholder="Comentaris..." rows="7")
+
+
+
+			.row.p-b-md
+				.col-sm-6.col-ms-6.form-left.clearfix
+					.checkbox.inline-block.pull-right
+						label
+							input(type="checkbox" name="checkbox-1")
+							span Acceptació #[a.link(href="javascript:;") política de privacitat de dades personals]
+
+				.col-sm-6.col-sm-6.form-right
+					.checkbox.inline-block
+						label
+							input(type="checkbox" name="checkbox-1")
+							span Vull rebre promocions i ofertes de BRAVAVANS
+
+
+
+			.text-center.p-b-lg-1
+				button.btn.btn-primary.btn-lg.p-x-lg-1 ENVIAR
+
+
+
+			.map.bg-clouds.height-45
+
+
+
+
+
+
+

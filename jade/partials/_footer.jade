@@ -1,0 +1,54 @@
+//- a.scrollto.scroll-to-top(href="#" data-target="body")
+	//- span.sr-only Back to top
+
+
+
+
+include ../snippets/social-link-icon.jade
+
+
+//- FOOTER
+footer.main-footer
+	.footer-1
+		.container
+			.row
+				.col-md-4.col-md-push-4(data-aos="zoom-in")
+					img.svg.large-brand(src="#{svgPath}footer-brand.svg")
+	
+
+
+			.social(data-aos="fade-up")
+				+socialLink('facebook')
+				+socialLink('twitter')
+				+socialLink('instagram')
+				+socialLink('youtube-play')
+				+socialLink('whatsapp')
+				+socialLink('envelope')
+
+
+			.row
+				.col-md-8.col-md-push-2
+					.row(data-aos="fade")
+						.col-sm-4.col-sm-push-0.col-ms-8.col-ms-push-2.col-xs-10.col-xs-push-1
+							a.btn.btn-primary.btn-sharp.btn-outline.btn-block(href="#") DESCARREGAR CONTRACTES
+						.col-sm-4.col-sm-push-0.col-ms-8.col-ms-push-2.col-xs-10.col-xs-push-1
+							a.btn.btn-primary.btn-sharp.btn-outline.btn-block(href="#") CONDICIONS LEGALS
+						.col-sm-4.col-sm-push-0.col-ms-8.col-ms-push-2.col-xs-10.col-xs-push-1
+							a.btn.btn-primary.btn-sharp.btn-outline.btn-block(href="#") FAQ's
+
+	.footer-2
+		.container
+			.row
+				.col-ms-6.col-sm-6
+					div(data-aos="fade-right" data-aos-anchor=".main-footer" data-aos-delay="500")
+						img.svg.girona-campers(src="#{svgPath}girona-campers.svg")
+
+				.col-ms-6.col-sm-6
+					.credits(data-aos="fade-left" data-aos-anchor=".main-footer" data-aos-delay="500") by ARTIC STUDIO 2016
+
+
+
+
+
+
+

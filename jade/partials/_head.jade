@@ -1,0 +1,91 @@
+include _metas.jade
+
+if pageName
+	title #{pageTitle} - #{pageName}
+else
+	title #{pageTitle}
+
+
+link(rel="stylesheet" type="text/css" href="#{pluginsPath}bootstrap/bootstrap.min.css")
+
+
+if plugins
+	each val in plugins
+		if val == 'pace'
+			script.
+				paceOptions = {
+					elements: true
+				};
+			script(src="assets/plugins/pace/pace.min.js")
+			link(rel="stylesheet" type="text/css" href="assets/plugins/pace/templates/pace-theme.css")
+
+		if val == 'animate'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}animate/animate.min.css")
+
+		if val == 'aos'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}aos/aos.css")
+
+		if val == 'bootstrap-select'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}bs-select/css/bootstrap-select.min.css")
+
+		if val == 'bs-datetimepicker'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}bs-datetimepicker/bootstrap-datetimepicker.min.css")
+
+		if val == 'owl'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}owl/owl.carousel.css")
+
+		if val == 'lightbox'
+			link(rel="stylesheet" type="text/css" href="#{pluginsPath}simple-lightbox/simple-lightbox.min.css")
+
+
+
+//- ICONS
+if fonticons
+	each val in fonticons
+		if val == 'fontawesome'
+			link(rel="stylesheet" type="text/css" href="#{iconsPath}fontawesome/css/font-awesome.min.css")
+
+		if val == 'ionicons'
+			link(rel="stylesheet" type="text/css" href="#{iconsPath}ionicons/css/ionicons.css")
+
+		if val == 'simple-line-icons'
+			link(rel="stylesheet" type="text/css" href="#{iconsPath}simple-line-icons/css/simple-line-icons.css")
+
+
+
+
+
+link(rel="stylesheet" type="text/css" href="#{cssPath}nitro.custom.min.css")
+
+if projectCSS
+	each val in projectCSS
+		link(rel="stylesheet" type="text/css" href="#{cssPath}#{val}")
+
+
+| <!--[if lt IE 9]>
+| <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+| <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+| <![endif]-->
+
+
+
+//- FAVICONS
+link(rel="apple-touch-icon-precomposed" sizes="144x144" href="#{iconsPath}favicon/apple-touch-icon-144-precomposed.png?v2")
+link(rel="apple-touch-icon-precomposed" sizes="114x114" href="#{iconsPath}favicon/apple-touch-icon-114-precomposed.png?v2")
+link(rel="apple-touch-icon-precomposed" sizes="72x72" href="#{iconsPath}favicon/apple-touch-icon-72-precomposed.png?v2")
+link(rel="apple-touch-icon-precomposed" sizes="57x57" href="#{iconsPath}favicon/apple-touch-icon-57-precomposed.png?v2")
+
+//- For IE 11, Chrome, Firefox, Safari, Opera
+//- link(rel="icon" href="#{iconsPath}favicon/favicon-16.png" sizes="16x16" type="image/png")
+//- link(rel="icon" href="#{iconsPath}favicon/favicon-32.png" sizes="32x32" type="image/png")
+//- link(rel="icon" href="#{iconsPath}favicon/favicon-48.png" sizes="48x48" type="image/png")
+//- link(rel="icon" href="#{iconsPath}favicon/favicon-62.png" sizes="62x62" type="image/png")
+//- link(rel="icon" href="#{iconsPath}favicon/favicon-192.png" sizes="192x192" type="image/png")
+
+link(rel="shortcut icon" href="#{iconsPath}favicon/favicon.png?v1")
+
+
+//- if(linkCanonical==='contactar')
+script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDrc_8R32bAWTexRFVIqQ6DFePkHxb1QYs")
+
+

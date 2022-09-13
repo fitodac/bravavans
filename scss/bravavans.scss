@@ -1,0 +1,334 @@
+// Bravavans typography
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,700');
+
+$oswald: 'Oswald', sans-serif;
+
+
+// Bravavans colors
+$brand-1: #009A98;
+$brand-2: #923E56;
+$dark: #4D4D4D;
+
+
+
+
+
+body{
+	background: #fff;
+	color: $dark;
+	font: 300 16px/1.5 $oswald;
+	letter-spacing: .5px;
+	overflow-x: hidden;
+	-webkit-font-smoothing: antialiased;
+}//body
+
+
+a.link{
+	color: $brand-1;
+	text-decoration: underline;
+
+	&:hover{
+		color: darken($brand-1, 10%);
+	}//hover
+}//a
+
+
+p{
+	margin-bottom: 23px;
+}//p
+
+
+strong{
+	font-weight: 400;
+}
+
+
+
+hr.dotted{
+	border-top: dashed 1px #999;
+}
+
+
+.display-4{ font-size: 3rem; }
+
+.display-4 + .lead{ 
+	color: #888;
+	font-size: 1rem;
+}
+
+
+
+
+.downarr{
+	border-top: solid 18px #fff;
+	border-left: solid 20px transparent;
+	border-right: solid 20px transparent;
+	margin-left: -20px;
+	left: 50%;
+	top: 0;
+	position: absolute;
+	z-index: 30;
+}//downarr
+
+
+
+
+.navbar-toggle{
+	color: transparent;
+	border-top: solid 2px #fff;
+	border-bottom: solid 2px #fff;
+	font-size: 0;
+	line-height: 0;
+	width: 30px;
+	height: 20px;
+	padding: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+	border-radius: 0;
+	transition: .2s;
+	position: relative;
+
+	&::before,
+	&::after{
+		background: #fff;
+		height: 2px;
+		width: 100%;
+		left: 0;
+		transition: .2s;
+		position: absolute;
+	}//before / after
+
+	&::before{
+		content: '';
+		top: 7px;
+	}//before
+
+
+
+	&:hover{
+		border: solid 2px #fff;
+		height: 30px;
+
+		&::before,
+		&::after{
+			width: 50%;
+			height: 50%;
+			left: 25%;
+			top: 25%;
+			opacity: .5;
+		}//before / after
+	}//hover
+
+}//navbar-toggle
+
+
+
+@import 'buttons';
+@import 'cards';
+
+
+
+
+
+// SEPARATORS
+.separator{
+
+	&.separator-primary{
+		background: $brand-1;
+	}//separator-secondary
+
+	&.separator-secondary{
+		background: $brand-2;
+	}//separator-secondary
+
+}//separator
+
+
+
+// TEXT COLOR
+.text-primary{ color: $brand-1; }
+.text-secondary{ color: $brand-2; }
+
+
+
+
+.img-overlay{
+
+	img{
+		mix-blend-mode: multiply;
+	}
+
+	&:hover img{
+		mix-blend-mode: unset;
+	}
+}//img-overlay
+
+
+@import 'titles';
+@import 'hero';
+
+
+
+
+.navbar-brand{
+	width: 150px;
+}//navbar-brand
+
+
+
+.iso-mountain{
+	width: 230px;
+}//ico-mountain
+
+.iso-xl,
+.iso-wave{
+	width: 360px;
+}//ico-mountain
+
+
+
+
+
+@import 'pace';
+
+
+
+
+/*-----------------------------------------------------*/
+/*	TEXT HEADERS
+/*-----------------------------------------------------*/
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: $oswald;
+}
+
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*	RESERVA
+/*-----------------------------------------------------*/
+.form-left{
+	padding-right: 80px;
+}//form-left
+
+
+.form-right{
+	padding-left: 80px;
+}//form-right
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*	PORTFOLIO GRID
+/*-----------------------------------------------------*/
+.portfolio-grid{
+	margin: 50px 0;
+
+
+	.img-portfolio{
+		border: solid 3px #fff;
+	}//img-portfolio
+
+}//portfolio-grid
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*	BANNER GIRONACAMPERS
+/*-----------------------------------------------------*/
+.banner-gironacampers{
+	background: url('../images/banner-girocampers.jpg') center / cover;
+	color: #fff;
+	text-align: center;
+	padding: 30px 0 40px;
+
+	.separator{
+		max-width: 70px;
+	}//separator
+
+}//banner-gironacampers
+
+
+
+
+@import 'models';
+@import 'sales';
+
+
+
+
+
+
+
+
+
+/*-----------------------------------------------------*/
+/*	LIST GROUP
+/*-----------------------------------------------------*/
+.list-group{
+
+	.panel{
+		border: solid 1px #ccc;
+		border-bottom-width: 2px;
+		margin-bottom: 5px;
+
+		.list-group-item{
+			background: #fff;
+			border-color: transparent;
+			border-radius: 0;
+
+			&[data-toggle="collapse"]:before{
+				content: '+';
+				color: $brand-1;
+				font-size: 30px;
+				top: 18px;
+			}//before
+
+			&[data-toggle="collapse"]:after{
+				content: '-';
+				color: #6F6F6F;
+				font-size: 40px;
+				top: 16px;
+				transform: translate(0,0);
+			}//after
+
+
+			.radio{
+				margin: -1px 10px 0 0;
+				float: left;
+			}//radio
+
+		}//list-group-item
+
+	}//panel
+
+}//list-group
+
+
+
+
+
+
+
+@import 'post';
+@import 'card-excerpt';
+@import 'pagination';
+@import 'social';
+@import 'forms';
+@import 'footer';
+
+
+// Please, let this code at the end of the file
+@import 'responsive';
+
+
+
+
+

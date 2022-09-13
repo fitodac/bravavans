@@ -1,0 +1,88 @@
+//- .main-header.affix
+.hero.scrollorama.gradient.overlay-gradient-dark.gradient-top.gradient-50
+
+	nav.navbar
+		.container
+			.row
+				.col-md-2.col-sm-12
+					.navbar-header
+						button.navbar-toggle.pull-right(type="button" data-toggle="collapse" data-target="#main-navbar") &#9776;
+
+						a.navbar-brand(href="./")
+							span.sr-only #{pageTitle}
+							img.svg(src="#{svgPath}bravavans-brand.svg")
+				
+
+
+				.col-md-8.col-sm-10
+					.collapse.navbar-collapse#main-navbar(style="height:1px;")
+						ul.nav.navbar-nav
+							li( class=(linkCanonical==='inici' ? 'active' : '') ).nav-item
+								a.nav-link(href="./") Inici
+
+							li( class=(linkCanonical==='bravavans' ? 'active' : '') ).nav-item
+								a.nav-link(href="./bravavans.html") Bravavans
+
+							li( class=(linkCanonical==='models' ? 'active' : '') ).nav-item
+								a.nav-link(href="./models.html") Models
+
+							li( class=(linkCanonical==='reserva' ? 'active' : '') ).nav-item
+								a.nav-link(href="./reserva.html") Reserva
+
+							li( class=(linkCanonical==='venta' ? 'active' : '') ).nav-item
+								a.nav-link(href="./venta.html") En Venta
+
+							li( class=(linkCanonical==='blog' || linkCanonical==='post' ? 'active' : '') ).nav-item
+								a.nav-link(href="./blog.html") Blog
+
+							li( class=(linkCanonical==='contactar' ? 'active' : '') ).nav-item
+								a.nav-link(href="./contactar.html") Contactar
+
+
+						select.selectpicker.visible-xs
+							option(value="ca") CATALÀ
+							option(value="es") ESPAÑOL
+							option(value="en") ENGLISH
+
+
+						button.btn.close.visible-xs(data-toggle="collapse" data-target="#main-navbar")
+
+
+
+
+				.col-sm-2.hidden-xs
+					select.selectpicker
+						option(value="ca") CATALÀ
+						option(value="es") ESPAÑOL
+						option(value="en") ENGLISH
+
+
+
+	.container
+		if heroICON
+			if( heroICON === 'mountain' )
+				.iso
+					img.svg.iso-mountain(src="#{svgPath}iso-mountain.svg")
+
+			if( heroICON === 'XL' )
+				.iso
+					img.svg.iso-xl(src="#{svgPath}iso-xl.svg")
+				
+			if( heroICON === 'wave' )
+				.iso
+					img.svg.iso-wave(src="#{svgPath}iso-wave.svg")
+
+		else
+			h1.pageTitle #{pageName}
+				hr.separator.separator-sm.weight-2
+
+			if pageDescription
+				.page-description #{pageDescription}
+
+
+
+	if heroBG
+		img.hero-bg(src='#{imgPath}#{heroBG}')
+
+
+

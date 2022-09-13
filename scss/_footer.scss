@@ -1,0 +1,53 @@
+/*-----------------------------------------------------*/
+/*	FOOTER
+/*-----------------------------------------------------*/
+.inici .main-footer{
+	margin-top: 0;
+
+	.footer-1 > .container{
+		border-top: none;
+	}
+}
+
+
+
+.main-footer{
+	margin-top: 70px;
+	
+	// FOOTER 1
+	.footer-1{
+
+		> .container{
+			border-top: dashed 1px #999;
+			padding: 80px 0 40px;
+		}//container
+
+
+		.large-brand{
+			width: 80%;
+			margin: 0 auto 30px;
+			display: block;
+		}//large-brand
+
+	}//footer-1
+	
+
+
+	// FOOTER 2
+	.footer-2{
+		border-top: solid 1px #666;
+		box-shadow: 0 10px 10px rgba(#000, .1) inset;
+		padding: 40px 0 20px;
+
+		.svg.girona-campers{
+			width: 300px;
+		}//girona-campers
+
+		.credits{
+			text-align: right;
+			font:300 1.1rem/1 $oswald;
+			padding-top: 57px;
+		}//credits
+	}//footer-2
+
+}//main-footer

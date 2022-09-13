@@ -1,0 +1,77 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos']
+	- var fonticons = ['fontawesome']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'blog'
+
+
+	- var pageName = 'Blog'
+	- var pageDescription = 'Rutes, espacades, info viatge...models'
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = '' // mountain / XL / wave
+
+
+include snippets/excerpt.jade
+
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container.p-t-lg-1
+		.row.p-b-lg
+			.col-sm-4.col-ms-6
+				+excerpt('blog1.jpg', 'm-b-lg', 'fade-up')
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog2.jpg', 'm-b-lg', 'fade-up', 200)
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog3.jpg', 'm-b-lg', 'fade-up', 400)
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog1.jpg', 'm-b-lg', 'fade-up')
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog2.jpg', 'm-b-lg', 'fade-up', 200)
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog3.jpg', 'm-b-lg', 'fade-up', 400)
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog1.jpg', 'm-b-lg', 'fade-up')
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog2.jpg', 'm-b-lg', 'fade-up', 200)
+
+			.col-sm-4.col-ms-6
+				+excerpt('blog3.jpg', 'm-b-lg', 'fade-up', 400)
+
+
+
+		.text-center
+			ul.pagination(data-aos="fade")
+				li.disabled
+					a(href="javascript:;")
+						i.fa.fa-angle-left
+
+				li: a(href="javascript:;") 1
+				li: a(href="javascript:;") 2
+				li: a(href="javascript:;") 3
+				li: a(href="javascript:;") 4
+				li.active: a(href="javascript:;") 5
+				li: a(href="javascript:;") 6
+				li: a(href="javascript:;") 7
+				li: a(href="javascript:;") 8
+				li: a(href="javascript:;") 9
+
+				li
+					a(href="javascript:;")
+						i.fa.fa-angle-right
+
+
+
+

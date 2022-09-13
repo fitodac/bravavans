@@ -1,0 +1,323 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos', 'bs-datetimepicker']
+	- var fonticons = ['fontawesome', 'ionicons']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'reserva'
+
+
+	- var pageName = 'Reserva'
+	- var pageDescription = 'Reserva la teva furgoneta Bravavans'
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = '' // mountain / XL / wave
+
+
+mixin option(text)
+	option(value="#{text}") #{text}
+
+
+
+mixin panel(id, tab, image)
+	.panel
+		.list-group-item(data-target="##{id}" data-toggle="collapse" data-parent="#serveis-accesoris") #{tab}
+
+			.radio
+				label
+					input(type="radio" name="radio-collapse" checked)
+					span
+
+
+
+		div(id="#{id}" class="panel-collapse collapse" aria-expanded="true")
+			.p
+				.row
+					.col-md-4
+						img.img-responsive(src="#{imgPath}#{image}")
+
+					.col-md-8
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
+							venenatis, purus justo condimentum ipsum, et pretium justo ante in dui. 
+							Nullam ac risus in ex mattis pellentesque tortor. Nam id nisi vitae 
+							quam vulputate sagittis eu ac mi. Donec molestie id eros ac finibus.
+
+						p.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque 
+							venenatis, purus justo condimentum ipsum, et pretium justo ante in dui. 
+							Nullam ac risus in ex mattis pellentesque tortor. Nam id nisi vitae quam 
+							vulputate sagittis eu ac mi. Donec molestie id eros ac finibus...
+
+
+
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container.p-t-lg-1
+		
+		form.form-horizontal
+		
+			.row.p-b-lg-1
+
+
+
+
+				//- LEFT FORM
+				.col-md-6.form-left
+
+					.h3.title-undeline Dades personals
+
+					.p-b-md
+						.form-group
+							label.col-md-4 NOM I COGNOMS
+							.col-md-8
+								input.form-control(type="text" placeholder="Nom i Cognoms")
+
+						.form-group
+							label.col-md-4 TELÈFON
+							.col-md-8
+								input.form-control(type="text" placeholder="Telèfon")
+
+						.form-group
+							label.col-md-4 E-MAIL
+							.col-md-8
+								input.form-control(type="text" placeholder="E-mail")
+
+						.form-group
+							label.col-md-4 REPETIR E-MAIL
+							.col-md-8
+								input.form-control(type="text" placeholder="Repetir e-mail")
+
+
+
+
+					.card.card-featured
+						.card-block.text-center.p-y-sm
+							p
+								small.text-concrete.fw-400 DATA D'EXPEDICIÓ DEL CARNET DE CONDUIR
+
+							.p-x-md.p-b-sm
+								.row
+									.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-x-sm
+											input.form-control.date-day(type="text")
+											span.form-control-feedback.fa.fa-caret-down
+
+									.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-x-sm
+											input.form-control.date-month(type="text")
+											span.form-control-feedback.fa.fa-caret-down
+
+									.col-sm-4.col-ms-4.col-xs-12.form-group.has-feedback.p-x-sm
+											input.form-control.date-year(type="text")
+											span.form-control-feedback.fa.fa-caret-down
+											
+
+
+
+
+
+				//- RIGHT FORM
+				.col-md-6.form-right
+					
+					.h3.title-undeline
+						span.pull-left DADES RESERVA
+						small.pull-right
+							a(href="javascript:;") Consultar tarifes
+
+
+					.form-group
+						label.col-md-4 MODEL DE FURGO
+						.col-md-8
+							select.form-control.selectpicker(title="MODEL DE FURGO")
+								option(value="Option #1") Option #1
+								option(value="Option #2") Option #2
+								option(value="Option #3") Option #3
+								option(value="Option #4") Option #4
+								option(value="Option #5") Option #5
+								option(value="Option #6") Option #6
+
+
+					.form-group
+						label.col-md-4 LLOC RECOLLIDA
+						.col-md-8
+							select.form-control.selectpicker(title="Estació AVE Girona")
+								option(value="Option #1") Option #1
+								option(value="Option #2") Option #2
+								option(value="Option #3") Option #3
+								option(value="Option #4") Option #4
+								option(value="Option #5") Option #5
+								option(value="Option #6") Option #6
+
+
+
+					.form-group
+						label.col-md-4 DATA INICI
+						.col-md-8
+							.row
+								.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-r-sm
+										input.form-control.date-day(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+								.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-x-sm
+										input.form-control.date-month(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+								.col-sm-4.col-ms-4.col-xs-12.form-group.has-feedback.p-l-sm
+										input.form-control.date-year(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+
+
+					.form-group
+						label.col-md-4 HORA
+						.col-md-8
+							.row
+								.col-md-4.p-r-sm
+									select.form-control.selectpicker
+										+option('00 H.')
+										+option('01 H.')
+										+option('02 H.')
+										+option('03 H.')
+										+option('04 H.')
+										+option('05 H.')
+										+option('06 H.')
+										+option('07 H.')
+										+option('08 H.')
+										+option('09 H.')
+										+option('10 H.')
+										+option('11 H.')
+										+option('12 H.')
+
+
+
+
+					.form-group
+						label.col-md-4 LLOC RETORN
+						.col-md-8
+							input.form-control(type="text" placeholder="c. exemple de carrer a Girona")
+
+
+
+
+					.form-group
+						label.col-md-4 DATA FI
+						.col-md-8
+							.row
+								.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-r-sm
+										input.form-control.date-day(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+								.col-sm-4.col-ms-4.col-xs-6.form-group.has-feedback.p-x-sm
+										input.form-control.date-month(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+								.col-sm-4.col-ms-4.col-xs-12.form-group.has-feedback.p-l-sm
+										input.form-control.date-year(type="text")
+										span.form-control-feedback.fa.fa-caret-down
+
+
+
+					.form-group
+						label.col-md-4 HORA
+						.col-md-8
+							.row
+								.col-md-4.p-r-sm
+									select.form-control.selectpicker
+										+option('00 H.')
+										+option('01 H.')
+										+option('02 H.')
+										+option('03 H.')
+										+option('04 H.')
+										+option('05 H.')
+										+option('06 H.')
+										+option('07 H.')
+										+option('08 H.')
+										+option('09 H.')
+										+option('10 H.')
+										+option('11 H.')
+										+option('12 H.')
+
+
+					.p-t
+						small.text-concrete.fw-400 PAGAMENT
+						hr.m-t-sm
+
+						.text-right
+							.radio.inline-block.m-r
+								label
+									input(type="radio" name="radio-payment" checked)
+									span TANFERÈNCIA BANCÀRIA
+
+
+							.radio.inline-block
+								label
+									input(type="radio" name="radio-payment")
+									span TARGETA DE CRÈDIT
+
+
+
+
+
+
+
+
+			.h3.title-undeline Serveis/accesoris
+
+
+			#serveis-accesoris.list-group.m-b-lg
+				+panel('collapse-1', 'NOM SERVEI/ACCESSORI 01', 'blog1.jpg')
+				+panel('collapse-2', 'NOM SERVEI/ACCESSORI 02', 'blog2.jpg')
+				+panel('collapse-3', 'NOM SERVEI/ACCESSORI 03', 'blog3.jpg')
+				+panel('collapse-4', 'NOM SERVEI/ACCESSORI 04', 'blog1.jpg')
+				+panel('collapse-5', 'NOM SERVEI/ACCESSORI 05', 'blog2.jpg')
+
+
+			.p-b-lg-1.visible-xs
+
+			.h3.title-undeline 
+				span.pull-left Comentaris
+				small.pull-right: a(href="javascript:;") Aconsellem que si tens dubtes, visitis la secció FAQ’s
+
+			textarea.form-control.m-b-lg(placeholder="Comentaris..." rows="7")
+
+
+
+			.row.p-b-md
+				.col-sm-6.col-ms-6.form-left
+					.checkbox.inline-block.pull-right
+						label
+							input(type="checkbox" name="checkbox-1")
+							span Acceptació #[a.link(href="javascript:;") política de privacitat de dades personals]
+
+				.col-sm-6.col-ms-6.form-right
+					.checkbox.inline-block
+						label
+							input(type="checkbox" name="checkbox-1")
+							span Vull rebre promocions i ofertes de BRAVAVANS
+
+
+
+			.text-center.p-b
+				p
+					button.btn.btn-primary.btn-lg.p-x-lg-1 ENVIAR
+				a.text-black(href="javascript:;") o contacta amb nosaltres
+
+
+
+
+
+			.text-center.
+				Aquest formulari no implica la contractació dels nostres serveis,#[br]
+				és purament per obtenir informació respecte a la sol·licitud. Un cop enviat el formulari estudiarem la teva petició i us respondrem el més ràpid possible.
+
+
+
+
+
+
+
+
+
+

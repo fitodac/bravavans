@@ -1,0 +1,196 @@
+//- INCLUDED META TAGS
+meta(charset="utf-8")
+meta(http-equiv="x-ua-Compatible" content="ie=edge")
+meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width, shrink-to-fit=no")
+//- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags
+
+
+//- **************
+//- Name of web application (only should be used if the website is used as an app)
+//- meta(name="application-name" content="Application Name")
+//- **************
+
+//- Short description of the page (limit to 150 characters)
+//- In *some* situations this description is used as a part of the snippet shown in the search results.
+meta(name="description" content="#{pageDescription}")
+
+//- Control the behavior of search engine crawling and indexing
+//- All Search Engines
+meta(name="robots" content="index, follow, noodp")
+//- Google Specific
+meta(name="googlebot" content="index,follow")
+
+//- Tells Google not to show the sitelinks search box
+meta(name="google" content="nositelinkssearchbox")
+
+//- **************
+//- Tells Google not to provide a translation for this page
+//- meta(name="google" content="notranslate")
+//- **************
+
+//- Verify ownership for Google Search Console
+meta(name="google-site-verification" content="verification_token")
+
+//- Used to name software used to build the website (i.e. - Wordpress, Dreamweaver)
+meta(name="generator" content="#{pageGenerator}")
+
+//- Short description of your site's subject
+meta(name="subject" content="#{pageSubject}")
+
+//- Very short sentence describing the purpose of the website
+meta(name="abstract" content="#{pagePurpose}")
+
+//- Describes the topic of the website
+meta(name="topic" content="")
+
+//- Brief summary of the company or purpose of the website
+meta(name="summary" content="")
+
+//- A deprecated tag that does the same as the keywords meta tag
+meta(name="classification" content="#{pageClassification}")
+
+//- Full domain name or web address
+meta(name="url" content="#{siteURL}")
+
+//- Does the same as URL, older and not supported
+meta(name="identifier-URL" content="#{siteURL}")
+
+meta(name="directory" content="submission")
+
+//- Does the same function as the keywords tag
+meta(name="category" content="#{pageClassification}")
+
+//- Makes sure your website shows up in all countries and languages
+meta(name="coverage" content="Worldwide")
+
+//- Does the same as the coverage tag
+meta(name="distribution" content="Global")
+
+//- Gives a general age rating based on sites content
+meta(name="rating" content="General")
+
+//- Allows control over how referrer information is passed
+meta(name="referrer" content="never")
+
+//- Disable automatic detection and formatting of possible phone numbers
+meta(name="format-detection" content="telephone=no")
+
+//- Geo tags
+meta(name="ICBM" content="latitude, longitude")
+meta(name="geo.position" content="latitude;longitude")
+//- Country code (ISO 3166-1): mandatory, state code (ISO 3166-2): optional; eg. content="US" / content="US-NY"
+meta(name="geo.region" content="#{metaGeo}")
+//- eg. content="New York City"
+meta(name="geo.placename" content="#{pagePlace}")
+
+
+link(rel="author" href="humans.txt")
+
+//- Google disregards & Bing considers it an indicator of spam
+//- meta(name="keywords" content="#{pageKeywords}")
+
+//- Helps prevent duplicate content issues
+//- eg. https://example.com/2010/06/9-things-to-do-before-entering-social-media.html
+link(rel="canonical" href="#{linkCanonical}")
+
+
+
+//- ------------------------------------------------------------
+//- SOCIAL
+//- ------------------------------------------------------------
+//- FACEBOOK / Open Graph
+meta(property="fb:app_id" content="#{fbAppID}")
+meta(name="og:url" content="#{siteURL}")
+meta(name="og:type" content="website")
+meta(name="og:title" content="#{siteOgTitle}")
+meta(name="og:image" content="#{siteOgImage}")
+meta(name="og:description" content="#{pageDescription}")
+meta(name="og:site_name" content="#{pageTitle}")
+meta(property="og:locale" content="en_US")
+meta(property="article:author" content="")
+
+//- Facebook / Instant Articles
+meta(property="op:markup_version" content="v1.0")
+meta(property="fb:article_style" content="myarticlestyle")
+
+
+//- TWITTER
+meta(name="twitter:card" content="summary")
+meta(name="twitter:site" content="#{twitterSite}")
+meta(name="twitter:creator" content="#{creatorAccount}")
+meta(name="twitter:url" content="#{linkCanonical}")
+meta(name="twitter:title" content="#{pageName}")
+meta(name="twitter:description" content="#{pageDescription}")
+meta(name="twitter:image" content="#{twitterImage}")
+//- More info: https://dev.twitter.com/cards/getting-started
+//- Validate: https://dev.twitter.com/docs/cards/validation/validator
+
+//- GOOGLE
+link(rel="publisher" href="https://plus.google.com/#{googleID}")
+meta(itemprop="name" content="#{pageTitle}")
+meta(itemprop="description" content="#{pageDescription}")
+meta(itemprop="image" content="#{googleImage}")
+
+
+
+
+//- ------------------------------------------------------------
+//- BROWSERS & PLATFORMS
+//- ------------------------------------------------------------
+//- iOS
+//- Smart App Banner
+meta(name="apple-itunes-app" content="#{smartAppBanner}")
+
+//- Add to Home Screen
+meta(name="apple-mobile-web-app-capable" content="yes")
+meta(name="apple-mobile-web-app-status-bar-style" content="#{mobileBrowserColor}")
+meta(name="apple-mobile-web-app-title" content="#{pageTitle}")
+
+//- Startup Image
+link(rel="apple-touch-startup-image" href="#{appleTouchStartUpImage}")
+//- More info: https://developer.apple.com/safari/library/documentation/appleapplications/reference/safarihtmlref/articles/metatags.html
+
+
+//- Apple Safari
+link(rel="mask-icon" href="#{safariMaskIcon}" color="#{mobileBrowserColor}")
+
+
+//- Google Android
+meta(name="theme-color" content="#{mobileBrowserColor}")
+//- Add to homescreen
+meta(name="mobile-web-app-capable" content="yes")
+//- More info: https://developer.chrome.com/multidevice/android/installtohomescreen
+
+
+//- Google Chrome
+link(rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/#{googleWebstoreID}")
+//- Disable translation prompt
+meta(name="google" value="notranslate")
+
+
+//- Microsoft Internet Explorer
+meta(http-equiv="cleartype" content="on")
+meta(name="skype_toolbar" content="skype_toolbar_parser_compatible")
+//- Disable link highlighting on IE 10 on Windows Phone (https://blogs.windows.com/buildingapps/2012/11/15/adapting-your-webkit-optimized-site-for-internet-explorer-10/)
+meta(name="msapplication-tap-highlight" content="no")
+//- Pinned sites (https://msdn.microsoft.com/en-us/library/dn255024(v=vs.85).aspx)
+meta(name="application-name" content="#{pageTitle}")
+meta(name="msapplication-tooltip" content="#{pageTitle}")
+meta(name="msapplication-starturl" content="/")
+//- meta(name="msapplication-config" content="http://example.com/browserconfig.xml")
+meta(name="msapplication-allowDomainApiCalls" content="true")
+meta(name="msapplication-allowDomainMetaTags" content="true")
+//- meta(name="msapplication-badge" content="frequency=30; polling-uri=http://example.com/id45453245/polling.xml")
+//- meta(name="msapplication-navbutton-color" content="#FF3300")
+//- meta(name="msapplication-notification" content="frequency=60;polling-uri=http://example.com/livetile")
+//- meta(name="msapplication-square150x150logo" content="path/to/logo.png")
+//- meta(name="msapplication-square310x310logo" content="path/to/largelogo.png")
+//- meta(name="msapplication-square70x70logo" content="path/to/tinylogo.png")
+//- meta(name="msapplication-wide310x150logo" content="path/to/widelogo.png")
+//- meta(name="msapplication-task" content="name=Check Order Status;action-uri=./orderStatus.aspx?src=IE9;icon-uri=./favicon.ico")
+//- meta(name="msapplication-task-separator" content="1")
+//- meta(name="msapplication-TileColor" content="#FF3300")
+//- meta(name="msapplication-TileImage" content="path/to/tileimage.jpg")
+//- meta(name="msapplication-window" content="width=1024;height=768")
+
+

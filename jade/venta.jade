@@ -1,0 +1,131 @@
+extend templates/_template.default.jade
+
+block pageData
+	- var plugins = ['pace', 'bootstrap-select', 'scrollorama', 'aos']
+	- var fonticons = ['fontawesome']
+	//- URL for current page. Helps to prevent duplicate content issues.
+	- var linkCanonical = 'venta'
+
+
+	- var pageName = 'Venta'
+	- var pageDescription = ''
+	- var heroBG = 'img-head.jpg'
+	- var heroICON = 'mountain' // mountain / XL / wave
+
+
+
+
+block content
+	include partials/_navbar.jade
+
+
+	.container
+		.p-t-lg-1.p-b-lg-2.text-center.text-secondary
+			.h1.display-3.fw-400 GIRONA CAMPERS
+
+			p.m-b.fz-80 IMPORTACIÓ I VENTA DE FURGONETES CAMPER
+
+			p.
+				A #[strong GIRONACAMPERS] ens dediquem a la gestió de compra i venta de furgonetes, 
+				i furgonetes camper o campervan. Els nostres vehicles provenen del mercat 
+				europeu (principalment nacional i alemany). Tots els nostres vehicles 
+				gaudeixen d’una garantia ampliada amb lliure elecció de taller.
+
+
+
+
+		//- VENTA
+		.p-b-lg-1.text-center(data-aos="fade-up")
+			.display-4.fw-400.inline-block.text-secondary VENTA
+				hr.separator.separator-sm.separator-secondary.weight-1
+
+
+		.row.p-b-lg-1
+			.col-sm-6.col-ms-6(data-aos="fade-right")
+				.card.card-thumbnail.m-b-md.img-overlay
+					.card-img.bg-primary
+						img.img-responsive(src="#{imgPath}van-01.jpg")
+					.card-block.absolute-bottom-right
+						.display-4.text-white.fw-500 16.900€
+
+				a.btn.btn-secondary.btn-outline.btn-sharp.btn-lg.p-x.fw-500.btn-sm-block(href="javascript:;") M'INTERESSA
+				a.btn.btn-secondary.btn-sharp.btn-lg.btn-download.btn-sm-block(href="javascript:;")
+					small DESCARREGAR#[br]INFORMACIÓ I FOTOS
+
+
+			.p-b-lg-2.visible-xs
+
+
+			.col-sm-6.col-ms-6(data-aos="fade-left")
+				.card.card-thumbnail.m-b-md.img-overlay
+					.card-img.bg-primary
+						img.img-responsive(src="#{imgPath}van-02.jpg")
+					.card-block.absolute-bottom-right
+						.display-4.text-white.fw-500 45.900€
+
+				a.btn.btn-secondary.btn-outline.btn-sharp.btn-lg.p-x.fw-500.btn-sm-block(href="javascript:;") M'INTERESSA
+				a.btn.btn-secondary.btn-sharp.btn-lg.btn-download.btn-sm-block(href="javascript:;")
+					small DESCARREGAR#[br]INFORMACIÓ I FOTOS
+
+
+
+
+
+		.card.card-secondary
+			.card-block.p-md
+				.text-center.p-b-md(data-aos="fade-up")
+					.h1.fw-400.inline-block SERVEI D’IMPORTACIÓ PERSONALITZADA
+						hr.separator.separator-xs.weight-1.bg-white
+
+
+				.row.p-b-lg
+					.col-sm-6(data-aos="fade-right" data-aos-delay="300")
+						ul.list-dot.fz-90
+							li Garantia de vehicle amb cobertura per sobre de l’estandar nacional.
+							li Previ al desplaçament disposem d’una xarxa de mecànics al territori que revisen l’estat motor dels vehicles.
+							li Recollida ‘en persona’. Ens desplacem personalment al punt de venta per tal de revisar l’estat del vehicle i la veracitat de l’anunci. No importem a través d’intermediaris ni subcontractem el transport. Nosaltres ens encarreguem de tot.
+					
+
+
+					.col-sm-6(data-aos="fade-left" data-aos-delay="300")
+						ul.list-dot.fz-90
+							li Revisió mecànica complerta amb 150 punts de control. Previ al lliurament del vehicle.
+							li Homologació, matriculació i nacionalització incloses.
+							li Directe d’Alemania a la porta de casa teva. Es pot demanar més?
+
+
+
+				.row
+					.col-md-9.col-sm-8.col-ms-7(data-aos="fade-right")
+						.card
+							.card-block
+								.h2.fw-500.m-b PROCEDIMENT
+
+								ul.list-dot.fz-90
+									li Expliques quin és el teu vehicle ideal i digues de quin pressupost disposem.
+									li En 5 dies hàbils t’enviem les 5 propostes que creiem més aptes a les teves expectatives.
+									li Esculls 3 vehicles i signem el contracte
+									li Un mecànic comprova i revisa l’estat mecànic dels 3 vehicles i establim un ordre de prioritats per a la compra.
+									li Ens desplacem als punts de venta dels vehicles, comprovem i corroborem el seu estat general i en tot moment detallem i valorem els vehicles tenint en compte la nostra opinió professional però també la teva opinió personal.
+									li Formalitzem el tràmit de compra, plaques provisionals, assegurança provisional,... a origen.
+									li Un cop a territori sotmetem el vehicle a una revisió de 150 punts de control, expedim una garantia de 12 mesos amb cobertura ampliada. Homologuem els accessoris del vehicle i formalitzem la matriculació i nacionalització.
+									li En dues setmanes d’Alemania a la porta de casa llesta per a circular. Es pot demanar més?
+
+
+					.col-md-3.col-sm-4.col-ms-5(data-aos="fade-left")
+						img.svg.m-b-md(src="#{svgPath}price-label.svg")
+
+						p.fz-90.p-b.
+							#[strong Inclou:] revisions mecàniques, bitllets avió, hotel, dietes, 
+							itv, homologacions, matriculació, gestions Trànsit,...
+
+						a.btn.btn-inverse.btn-sharp.btn-block.btn-lg(href="javascript:;")
+							span.text-secondary M'INTERESSA
+
+
+
+
+
+
+
+
